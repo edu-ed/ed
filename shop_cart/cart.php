@@ -5,7 +5,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Handle cart actions
+
 if (isset($_GET['action'])) {
     $product_id = $_GET['id'] ?? 0;
     
@@ -18,7 +18,7 @@ if (isset($_GET['action'])) {
         $stmt->execute();
     }
     
-    // Remove item from the cart
+   
     elseif ($_GET['action'] == 'remove') {
         // Ensure the ID exists in the cart before deleting it
         $stmt = $conn->prepare("DELETE FROM cart WHERE product_id = ?");  // Delete the specific product from cart
@@ -26,7 +26,7 @@ if (isset($_GET['action'])) {
         $stmt->execute();
     }
     
-    // Update item quantity in the cart
+    
     elseif ($_GET['action'] == 'update' && isset($_POST['quantity'])) {
         $quantity = $_POST['quantity'];
         $stmt = $conn->prepare("UPDATE cart SET quantity = ? WHERE product_id = ?");
@@ -35,7 +35,7 @@ if (isset($_GET['action'])) {
     }
 }
 
-// Display Cart
+
 $result = $conn->query("SELECT cart.id, products.name, products.price, cart.quantity, products.id AS product_id
                         FROM cart 
                         JOIN products ON cart.product_id = products.id");
@@ -81,7 +81,7 @@ $result = $conn->query("SELECT cart.id, products.name, products.price, cart.quan
                 </td>
                 <td>₱<?= number_format($subTotal, 2) ?></td>
                 <td>
-                    <!-- Ensure product_id is valid and remove only the selected item -->
+                   
                     <a href="cart.php?action=remove&id=<?= $row['product_id'] ?>" class="remove-btn">Remove</a>
                 </td>
             </tr>
