@@ -1,4 +1,4 @@
-/* General Page Styling */
+
 body {
     font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
@@ -6,7 +6,7 @@ body {
     background: linear-gradient(to right, #f4f4f4, #dfe9f3);
 }
 
-/* Main Container */
+
 .container {
     width: 80%;
     margin: auto;
@@ -19,7 +19,7 @@ body {
     text-align: center;
 }
 
-/* Header */
+
 .header {
     background: linear-gradient(to right, #007bff, #0056b3);
     color: white;
@@ -29,7 +29,7 @@ body {
     border-radius: 8px 8px 0 0;
 }
 
-/* Product Grid */
+
 .product-grid {
     display: flex;
     justify-content: center;
@@ -38,7 +38,7 @@ body {
     margin-top: 20px;
 }
 
-/* Product Card */
+
 .product-card {
     background: white;
     padding: 20px;
@@ -53,20 +53,20 @@ body {
     transform: translateY(-5px);
 }
 
-/* Product Name */
+
 .product-card h3 {
     color: #333;
     margin-bottom: 10px;
 }
 
-/* Price Styling */
+
 .price {
     font-size: 18px;
     color: #28a745;
     font-weight: bold;
 }
 
-/* Add to Cart Button */
+
 .add-to-cart-btn {
     background: #28a745;
     color: white;
@@ -83,7 +83,7 @@ body {
     transform: scale(1.05);
 }
 
-/* View Cart Link */
+
 .cart-link {
     margin-top: 20px;
 }
@@ -102,7 +102,7 @@ body {
     background: #0056b3;
 }
 
-/* Footer */
+
 .footer {
     margin-top: 20px;
     text-align: center;
