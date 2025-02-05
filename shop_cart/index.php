@@ -5,7 +5,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Fetch products
+
 $result = $conn->query("SELECT * FROM products");
 ?>
 
